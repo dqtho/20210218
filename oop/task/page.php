@@ -1,3 +1,16 @@
+<?php
+    $user = $_POST["id"];
+    $pass = $_POST["password"];
+    
+    if($user == "user01" && $pass == "pass01"){
+        $text = "ログインが成功しました。";
+    }else{
+        $text = "ログインに失敗しました。";
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,7 +18,7 @@
 	<title>ログイン結果</title>
 </head>
 <body>
-	<p>ログインが成功しました。</p>
-	<p>ログインに失敗しました。</p>
+	<h1><?= $text ?></h1>
+
 </body>
 </html>
